@@ -1,1 +1,167 @@
-<mxfile host="app.diagrams.net" modified="2022-02-09T03:36:47.314Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" version="16.1.2" etag="byfZE4PAv0VhC2uwjyXA" type="github"><diagram id="trUX2MhBGgKEebKZ8raj">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-02-10T08:34:36.356Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="9oHYSQCCR2VNUNJ15-jd" version="16.1.2" type="github">
+  <diagram id="trUX2MhBGgKEebKZ8raj" name="Page-1">
+    <mxGraphModel dx="1051" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-1" value="主备节点启动流程一致，区别在于mysqlProbe心跳检测处理&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;glass=0;shadow=1;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="250" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-2" target="Lf9sNuG4pvxllF8-RJTd-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-2" value="starrt" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="200" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-4" target="Lf9sNuG4pvxllF8-RJTd-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-4" value="touch .init_done&lt;br&gt;(/root/.init_done)" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-8" target="Lf9sNuG4pvxllF8-RJTd-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-8" value="start with init_file: 初始化`heartbeat`表" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="385" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-11" value="&lt;div style=&quot;text-align: justify&quot;&gt;+----+-------------------------+-------------+------------------------------+&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&amp;nbsp;| id&amp;nbsp; | master_name&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; | server_id |&amp;nbsp; &amp;nbsp; ts&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; |&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;+----+-------------------------+-------------+------------------------------+&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&amp;nbsp;|&amp;nbsp; 1&amp;nbsp; | gh-ost-f4d1c00-0&amp;nbsp; &amp;nbsp;|&amp;nbsp; &amp;nbsp;4081&amp;nbsp; &amp;nbsp; &amp;nbsp;|&amp;nbsp; 2022-02-09 11:46:16&amp;nbsp; |&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;+----+-------------------------+-------------+------------------------------+&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="410" y="360" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-14" value="start with readOnly mode&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;shadow=1;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="480" width="160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-17" target="Lf9sNuG4pvxllF8-RJTd-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-17" value="start&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="210" y="690" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-18" target="Lf9sNuG4pvxllF8-RJTd-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-18" value="wait mysql to start:connect ok" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;glass=0;sketch=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-23" target="Lf9sNuG4pvxllF8-RJTd-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-23" value="get mysql type : mysql? mariadb?" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="850" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-30" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.813;entryY=1.015;entryDx=0;entryDy=0;entryPerimeter=0;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-26" target="Lf9sNuG4pvxllF8-RJTd-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="940" />
+              <mxPoint x="390" y="801" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-31" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lf9sNuG4pvxllF8-RJTd-30">
+          <mxGeometry x="-0.009" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-34" value="Yes" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-26" target="Lf9sNuG4pvxllF8-RJTd-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-26" value="check mysql heath: select 1" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-36" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-33" target="Lf9sNuG4pvxllF8-RJTd-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-37" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lf9sNuG4pvxllF8-RJTd-36">
+          <mxGeometry x="-0.3444" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-42" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;exitX=0.976;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-33" target="Lf9sNuG4pvxllF8-RJTd-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-43" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lf9sNuG4pvxllF8-RJTd-42">
+          <mxGeometry x="-0.2704" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-33" value="check gtid.txt exists?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="176.25" y="1010" width="167.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-35" value="sleep 等待重做" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-41" value="第一次启动，只有0号库允许去获得锁" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1110" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-45" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-44" target="Lf9sNuG4pvxllF8-RJTd-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-44" value="通过检查数据目录DATADIR/sock/.ack刚开始是否存在来判断" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="470" y="970" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-48" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-46" target="Lf9sNuG4pvxllF8-RJTd-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-46" value="start" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1390" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-50" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-47" target="Lf9sNuG4pvxllF8-RJTd-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-51" value="有主，且我不是主" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lf9sNuG4pvxllF8-RJTd-50">
+          <mxGeometry x="0.1064" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-53" value="&lt;span style=&quot;font-size: 12px ; background-color: rgb(248 , 249 , 250)&quot;&gt;无主 或者我是主&lt;/span&gt;" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-47" target="Lf9sNuG4pvxllF8-RJTd-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-47" value="检查当前是否有master" style="whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1450" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-49" value="走备库流程" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="1550" width="115" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-56" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-52" target="Lf9sNuG4pvxllF8-RJTd-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-52" value="选主" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1550" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-59" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-55" target="Lf9sNuG4pvxllF8-RJTd-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-61" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;" edge="1" parent="1" source="Lf9sNuG4pvxllF8-RJTd-55" target="Lf9sNuG4pvxllF8-RJTd-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-63" value="获取锁成功" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Lf9sNuG4pvxllF8-RJTd-61">
+          <mxGeometry x="-0.1478" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-55" value="尝试获取锁" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1630" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-58" value="exit process" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1720" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-60" value="检查是否可以提升为主" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;shadow=0;glass=0;sketch=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1720" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Lf9sNuG4pvxllF8-RJTd-62" value="获取锁失败" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1680" width="80" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
